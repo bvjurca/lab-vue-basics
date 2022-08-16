@@ -3,11 +3,27 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
       <!--Iteration 2a-->
-      <p> {{ 2 + 2 * 2 }} </p>
+      <p> Showing arithmetics in a moustache syntax: {{ 2 + 2 * 2 }} </p>
+      <!--Iteration 3-->
+      <button @click="btnClick++">Click me</button>
+      <div v-if="btnClick %2 == 1">
+        <p>🎉 Iteration 3 complete 🎉</p>
+      </div>
     </nav>
 </template>
 
-<script setup>
+<script>
+import { ref } from 'vue';
+
+const btnClick = ref(false);
+export default {
+  data() {
+    return {
+      btnClick: 0,
+    };
+  },
+
+};
 
 </script>
 
