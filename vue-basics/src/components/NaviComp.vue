@@ -2,6 +2,8 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <!--Iteration 2a-->
+      <p> {{ 2 + 2 * 2 }} </p>
     </nav>
 </template>
 

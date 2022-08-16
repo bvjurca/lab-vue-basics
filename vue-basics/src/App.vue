@@ -1,6 +1,11 @@
+<!-- eslint-disable vuejs-accessibility/label-has-for -->
 <template>
   <NaviComp />
-
+  <!--Iteration 2b-->
+  <div id="iteration-two">
+    <label for="text">Something to do with {{ textInInput }} </label>
+    <input v-model="textInInput" placeholder="Type here..."/>
+  </div>
   <router-view/>
   <FooterComp />
 </template>
@@ -16,9 +21,9 @@ export default {
     FooterComp, NaviComp,
   },
   setup() {
-    const name = ref(0);
+    const textInInput = ref('');
     return {
-      name,
+      textInInput,
     };
   },
 };
@@ -32,6 +37,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+input {
+  display: block;
+  margin: auto;
+}
+
+#iteration-two {
+  margin-bottom: 100px;
 }
 
 </style>
