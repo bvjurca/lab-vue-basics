@@ -3,6 +3,6 @@
     <h1>This is an about page</h1>
   </div>
   <section>
-    <p>Names</p>
+    <p>Started learning Vue.js in August 2022</p>
   </section>
 </template>

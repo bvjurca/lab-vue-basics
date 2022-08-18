@@ -6,16 +6,13 @@
       <p> Showing arithmetics in a moustache syntax: {{ 2 + 2 * 2 }} </p>
       <!--Iteration 3-->
       <button @click="btnClick++">Click me</button>
-      <div v-if="btnClick %2 == 1">
+      <div v-if="btnClick %2 == 1"> <!-- is initialised with 0, show every other click !-->
         <p>🎉 Iteration 3 complete 🎉</p>
       </div>
     </nav>
 </template>
 
 <script>
-import { ref } from 'vue';
-
-const btnClick = ref(false);
 export default {
   data() {
     return {
